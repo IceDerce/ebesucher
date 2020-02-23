@@ -11,7 +11,11 @@ none='\e[0m'
 
 apt-get update
 apt-get -y install xorg lxde-core tightvncserver
-wget https://raw.githubusercontent.com/IceDerce/ebesucher/master/vncserverinit.txt https://raw.githubusercontent.com/IceDerce/ebesucher/master/vncxstartup.txt https://raw.githubusercontent.com/IceDerce/ebesucher/master/firefox.desktop
+wget https://raw.githubusercontent.com/IceDerce/ebesucher/master/vncserverinit.txt \
+https://raw.githubusercontent.com/IceDerce/ebesucher/master/vncxstartup.txt \
+https://raw.githubusercontent.com/IceDerce/ebesucher/master/firefox.desktop \
+https://raw.githubusercontent.com/IceDerce/ebesucher/master/profiles.ini \
+https://raw.githubusercontent.com/IceDerce/ebesucher/master/firefox-set.tar.gz
 
 
 tightvncserver :1  2>&1
@@ -30,7 +34,7 @@ wget http://ftp.mozilla.org/pub/firefox/releases/51.0/linux-x86_64/en-US/firefox
 tar xjf firefox-51.0.tar.bz2
 mv firefox/ /usr/local/lib/
 
-wget https://raw.githubusercontent.com/IceDerce/ebesucher/master/firefox-set.tar.gz
 tar -zvxf firefox-set.tar.gz
 mv modified.default .mozilla/firefox
+mv profiles.ini .mozilla/firefox
 ln -s /usr/local/lib/firefox/firefox /usr/bin/firefox
