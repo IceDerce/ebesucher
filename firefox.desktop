@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=Firefox 51.0.1
+Comment=this is firefox
+Exec=/usr/local/lib/firefox/firefox
+Icon=/usr/lib/firefox/icons/mozicon128.png
+Terminal=false
+Type=Application
+Categories=Application;Network;
