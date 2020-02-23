@@ -26,6 +26,6 @@ update-rc.d vncserver defaults
 mv firefox.desktop /usr/share/applications/
 
 wget https://objectstorage.ap-tokyo-1.oraclecloud.com/n/nrjcs6lwr9vy/b/tokyo-oracle-10gb/o/ebesucherfirefox-51-addon.modified.tar.gz
-tar -zvxf ebesucherfirefox-51-addon.modified.tar.gz firefox/
+tar -zvxf ebesucherfirefox-51-addon.modified.tar.gz
 mv firefox/ /usr/local/lib/
 ln -s /usr/local/lib/firefox/firefox /usr/bin/firefox
