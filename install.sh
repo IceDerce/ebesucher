@@ -33,8 +33,12 @@ mv firefox.desktop /usr/share/applications/
 wget http://ftp.mozilla.org/pub/firefox/releases/51.0/linux-x86_64/en-US/firefox-51.0.tar.bz2
 tar xjf firefox-51.0.tar.bz2
 mv firefox/ /usr/local/lib/
+ln -s /usr/local/lib/firefox/firefox /usr/bin/firefox
+firefox
+killall firefox
 
 tar -zvxf firefox-set.tar.gz
+rm -r .mozilla/firefox/profiles.ini
 mv modified.default .mozilla/firefox
 mv profiles.ini .mozilla/firefox
-ln -s /usr/local/lib/firefox/firefox /usr/bin/firefox
+
