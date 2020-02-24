@@ -19,16 +19,18 @@ https://raw.githubusercontent.com/IceDerce/ebesucher/master/firefox-set.tar.gz
 
 
 tightvncserver :1  2>&1
+tightvncserver -kill :1  
 rm -f ~/.vnc/xstartup
 mv vncxstartup.txt ~/.vnc/xstartup
 chmod +x ~/.vnc/xstartup
 
+
 mv vncserverinit.txt /etc/init.d/vncserver
 chmod +x /etc/init.d/vncserver
 update-rc.d vncserver defaults
+tightvncserver :1
 
 mv firefox.desktop /usr/share/applications/
-
 
 wget http://ftp.mozilla.org/pub/firefox/releases/51.0/linux-x86_64/en-US/firefox-51.0.tar.bz2
 tar xjf firefox-51.0.tar.bz2
