@@ -13,7 +13,7 @@ apt-get update
 apt-get -y install xorg lxde-core tightvncserver libgtk3.0-cil-dev xterm jwm mercurial libasound2-dev libcurl4-openssl-dev libnotify-dev libxt-dev libiw-dev mesa-common-dev autoconf2.13 yasm libidl-dev screen
 mkdir ./tmp/ && cd tmp/
 wget https://raw.githubusercontent.com/IceDerce/ebesucher/master/vncserverinit.txt \
-https://raw.githubusercontent.com/IceDerce/ebesucher/master/vncxstartup.txt \
+https://raw.githubusercontent.com/5aimiku/ebesucher-for-debian/master/vncxstartup.txt \
 https://raw.githubusercontent.com/IceDerce/ebesucher/master/firefox.desktop 
 
 tightvncserver :1  2>&1
