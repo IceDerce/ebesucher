@@ -10,8 +10,7 @@ none='\e[0m'
 [[ $(id -u) != 0 ]] && echo -e "\n 哎呀……请使用 ${red}root ${none}用户运行 ${yellow}~(^_^) ${none}\n" && exit 1
 
 apt-get update
-apt-get -y install xorg lxde-core tightvncserver libgtk3.0-cil-dev xterm libxt-dev libiw-dev libidl-dev
-
+apt-get -y install xorg lxde-core tightvncserver libgtk3.0-cil-dev xterm jwm mercurial libasound2-dev libcurl4-openssl-dev libnotify-dev libxt-dev libiw-dev mesa-common-dev autoconf2.13 yasm libidl-dev screen
 mkdir ./tmp/ && cd tmp/
 wget https://raw.githubusercontent.com/IceDerce/ebesucher/master/vncserverinit.txt \
 https://raw.githubusercontent.com/IceDerce/ebesucher/master/vncxstartup.txt \
