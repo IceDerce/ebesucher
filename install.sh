@@ -42,9 +42,9 @@ firefox
 killall firefox
 
 tar -zvxf firefox-set.tar.gz
-rm -r .mozilla/firefox/profiles.ini
-mv modified.default .mozilla/firefox
-mv profiles.ini .mozilla/firefox
+rm -rf /root/.mozilla/firefox/profiles.ini
+mv modified.default /root/.mozilla/firefox
+mv profiles.ini /root/.mozilla/firefox
 
 rm -rf /root/tmp/
 
