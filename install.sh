@@ -15,10 +15,7 @@ apt-get -y install xorg lxde-core tightvncserver libgtk3.0-cil-dev xterm libxt-d
 mkdir ./tmp/ && cd tmp/
 wget https://raw.githubusercontent.com/IceDerce/ebesucher/master/vncserverinit.txt \
 https://raw.githubusercontent.com/IceDerce/ebesucher/master/vncxstartup.txt \
-https://raw.githubusercontent.com/IceDerce/ebesucher/master/firefox.desktop \
-https://raw.githubusercontent.com/IceDerce/ebesucher/master/profiles.ini \
-https://raw.githubusercontent.com/IceDerce/ebesucher/master/firefox-set.tar.gz
-
+https://raw.githubusercontent.com/IceDerce/ebesucher/master/firefox.desktop 
 
 tightvncserver :1  2>&1
 tightvncserver -kill :1  
@@ -29,18 +26,21 @@ chmod +x ~/.vnc/xstartup
 mv vncserverinit.txt /etc/init.d/vncserver
 chmod +x /etc/init.d/vncserver
 update-rc.d vncserver defaults
+mv firefox.desktop /usr/share/applications/
+
 tightvncserver :1
 
-mv firefox.desktop /usr/share/applications/
 
 wget http://ftp.mozilla.org/pub/firefox/releases/51.0/linux-x86_64/en-US/firefox-51.0.tar.bz2
 tar xjf firefox-51.0.tar.bz2
 mv firefox/ /usr/local/lib/
 ln -s /usr/local/lib/firefox/firefox /usr/bin/firefox
-firefox --new-tab www.google.com
+firefox --no-remote
 sleep 3
 killall firefox
 
+wget https://raw.githubusercontent.com/IceDerce/ebesucher/master/profiles.ini \
+https://raw.githubusercontent.com/IceDerce/ebesucher/master/firefox-set.tar.gz
 tar -zvxf firefox-set.tar.gz
 rm -rf /root/.mozilla/firefox/profiles.ini
 mv modified.default /root/.mozilla/firefox
