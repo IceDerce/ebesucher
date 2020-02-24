@@ -38,7 +38,7 @@ wget http://ftp.mozilla.org/pub/firefox/releases/51.0/linux-x86_64/en-US/firefox
 tar xjf firefox-51.0.tar.bz2
 mv firefox/ /usr/local/lib/
 ln -s /usr/local/lib/firefox/firefox /usr/bin/firefox
-firefox
+firefox --new-tab www.google.com
 killall firefox
 
 tar -zvxf firefox-set.tar.gz
