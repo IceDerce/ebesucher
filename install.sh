@@ -10,7 +10,9 @@ none='\e[0m'
 [[ $(id -u) != 0 ]] && echo -e "\n 哎呀……请使用 ${red}root ${none}用户运行 ${yellow}~(^_^) ${none}\n" && exit 1
 
 apt-get update
-apt-get -y install xorg lxde-core tightvncserver
+apt-get -y install xorg lxde-core tightvncserver libgtk3.0-cil
+
+mkdir ./tmp/ && cd tmp/
 wget https://raw.githubusercontent.com/IceDerce/ebesucher/master/vncserverinit.txt \
 https://raw.githubusercontent.com/IceDerce/ebesucher/master/vncxstartup.txt \
 https://raw.githubusercontent.com/IceDerce/ebesucher/master/firefox.desktop \
@@ -43,4 +45,6 @@ tar -zvxf firefox-set.tar.gz
 rm -r .mozilla/firefox/profiles.ini
 mv modified.default .mozilla/firefox
 mv profiles.ini .mozilla/firefox
+
+rm -rf /root/tmp/
 
