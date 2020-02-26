@@ -39,11 +39,9 @@ ln -s /usr/local/lib/firefox/firefox /usr/bin/firefox
 #sleep 3
 #killall firefox
 
-#wget https://raw.githubusercontent.com/IceDerce/ebesucher/master/profiles.ini \
-#https://raw.githubusercontent.com/IceDerce/ebesucher/master/firefox-set.tar.gz
-tar -zvxf firefox-set.tar.gz
-rm -rf /root/.mozilla/firefox/profiles.ini
-mv modified.default /root/.mozilla/firefox
-mv profiles.ini /root/.mozilla/firefox
+wget https://raw.githubusercontent.com/IceDerce/ebesucher/master/firefox-modified-set.tar.gz
+tar -zvxf firefox-modified-set.tar.gz
+
+mv ./.mozilla/ /root/
 
 rm -rf /root/tmp/
